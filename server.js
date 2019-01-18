@@ -65,6 +65,13 @@ app.get('/bad', (req, res) => {
   });
 });
 
+// 4th route
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Project page',
+    newMessage: 'new page created and deployed to test'
+  });
+});
 app.listen(port, () => {
   console.log(`server is up and running on port: ${port}`);
 });
